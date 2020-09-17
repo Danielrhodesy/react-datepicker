@@ -155,6 +155,7 @@ class DateRangePickerWrapper extends React.Component {
                 focusedInput={focusedInput}
                 widget_date={widget_date}
                 widget_date_to={widget_date_to}
+                displayFormat={() => "DD/MM/YYYY"}
                 // displayFormat={"DD-MM-YYYY"}
             />
             <input type="submit" value="Submit" data-wait="Please wait..." class="w-button"/>

@@ -433,7 +433,7 @@ describe('DateRangePickerInputController', () => {
     });
 
     describe('is blocked', () => {
-      const futureDate = moment().add(7, 'days').format('MM/DD/YYYY');
+      const futureDate = moment().add(7, 'days').format('DD/MM/YYYY');
       const isDayBlocked = sinon.stub().returns(true);
 
       it('calls props.onDatesChange', () => {
@@ -751,7 +751,7 @@ describe('DateRangePickerInputController', () => {
     });
 
     describe('is outside range', () => {
-      const futureDate = moment().add(7, 'days').format('MM/DD/YYYY');
+      const futureDate = moment().add(7, 'days').format('DD/MM/YYYY');
       const isOutsideRange = (day) => day > moment().add(5, 'days');
 
       it('calls props.onDatesChange', () => {
@@ -796,7 +796,7 @@ describe('DateRangePickerInputController', () => {
     });
 
     describe('is blocked', () => {
-      const futureDate = moment().add(7, 'days').format('MM/DD/YYYY');
+      const futureDate = moment().add(7, 'days').format('DD/MM/YYYY');
       const isDayBlocked = sinon.stub().returns(true);
 
       it('calls props.onDatesChange', () => {
