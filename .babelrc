@@ -1,7 +1,10 @@
 {
   "env": {
     "test": {
-      "presets": [["airbnb", { looseClasses: true }]],
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+        ["airbnb", { looseClasses: true }]],
       "plugins": [
         ["inline-react-svg", {
           "svgo": false
@@ -55,5 +58,6 @@
         "./scripts/pure-component-fallback.js",
       ],
     },
+   
   },
 }

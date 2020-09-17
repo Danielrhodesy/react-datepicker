@@ -1,3 +1,35 @@
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/initialize';
+import DateRangePickerWrapper from './components/DateRangePickerWrapper';
+// import DateRangePicker from './components/DateRangePicker';
+// import '!style!css!sass!react-dates/css/variables.scss';
+// import '!style!css!sass!react-dates/css/styles.scss';
+
+    class App extends Component {
+        render() {
+            return (
+                <>
+                    
+                        {/* <h1>I am getting rendered</h1> */}
+                        <DateRangePickerWrapper/>
+                    
+                </>
+            )
+        }
+    }
+
+ReactDOM.render(
+React.createElement(App, {}, null),
+document.getElementById('react-datepicker')
+);
+
+
+
+
+
+
 export { default as CalendarDay } from './components/CalendarDay';
 export { default as CalendarMonth } from './components/CalendarMonth';
 export { default as CalendarMonthGrid } from './components/CalendarMonthGrid';

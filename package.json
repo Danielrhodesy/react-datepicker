@@ -1,10 +1,12 @@
 {
-  "name": "react-dates",
+  "name": "mandala-datepicker",
   "version": "21.8.0",
   "description": "A responsive and accessible date range picker component built with React",
   "main": "index.js",
   "scripts": {
     "prebuild": "npm run clean",
+    "webbuild": "webpack", 
+    "deploy": "aws s3 cp ./dist/bundle.js s3://react-datepicker-mandala/ --acl public-read",
     "build": "npm run build:cjs && npm run build:esm && npm run build:css -- --optimize ",
     "build:cjs": "BABEL_ENV=cjs babel src/ -d lib/",
     "build:esm": "BABEL_ENV=esm babel src/ -d esm/",
@@ -38,7 +40,8 @@
     "prepublish": "in-publish && safe-publish-latest && npm run build || not-in-publish",
     "postpublish": "[ \"${npm_config_tag:-latest}\" != latest ] || npm run gh-pages",
     "check-changelog": "expr $(git status --porcelain 2>/dev/null| grep \"^\\s*M.*CHANGELOG.md\" | wc -l) >/dev/null || (echo 'Please edit CHANGELOG.md' && exit 1)",
-    "check-only-changelog-changed": "(expr $(git status --porcelain 2>/dev/null| grep -v \"CHANGELOG.md\" | wc -l) >/dev/null && echo 'Only CHANGELOG.md may have uncommitted changes' && exit 1) || exit 0"
+    "check-only-changelog-changed": "(expr $(git status --porcelain 2>/dev/null| grep -v \"CHANGELOG.md\" | wc -l) >/dev/null && echo 'Only CHANGELOG.md may have uncommitted changes' && exit 1) || exit 0",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development --progress --colors --port 3000"
   },
   "repository": {
     "type": "git",
@@ -52,9 +55,12 @@
   "homepage": "https://github.com/airbnb/react-dates#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.5.5",
-    "@babel/runtime": "^7.0.0",
+    "@babel/runtime": "^7.11.2",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-info": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
@@ -65,7 +71,7 @@
     "airbnb-js-shims": "^2.2.0",
     "aphrodite": "^2.3.1",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-inline-svg": "^1.0.1",
     "babel-plugin-istanbul": "^5.2.0",
@@ -95,13 +101,13 @@
     "karma-webpack": "^4.0.2",
     "mocha": "^3.5.3",
     "mocha-wrap": "^2.1.2",
-    "moment": "^2.24.0",
+    "moment": "^2.28.0",
     "moment-jalaali": "^0.7.4",
     "node-sass": "^4.12.0",
     "nyc": "^14.1.1",
     "raw-loader": "^0.5.1",
-    "react": "^0.14 || ^15.5.4 || ^16.1.1",
-    "react-dom": "^0.14 || ^15.5.4 || ^16.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-with-styles-interface-aphrodite": "^6.0.0",
     "react-with-styles-interface-css-compiler": "^2.2.0",
     "rimraf": "^2.6.3",
@@ -111,7 +117,9 @@
     "sinon-sandbox": "^2.0.5",
     "style-loader": "^0.20.3",
     "typescript": "*",
-    "webpack": "^4.31.0"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "airbnb-prop-types": "^2.15.0",
@@ -123,6 +131,7 @@
     "object.values": "^1.1.0",
     "prop-types": "^15.7.2",
     "raf": "^3.4.1",
+    "react-dates": "^21.8.0",
     "react-moment-proptypes": "^1.6.0",
     "react-outside-click-handler": "^1.2.4",
     "react-portal": "^4.2.0",
