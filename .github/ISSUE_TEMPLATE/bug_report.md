@@ -17,11 +17,11 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior:
 ```
 <DateRangePicker
-  startDate={this.state.startDate}
-  startDateId="your_unique_start_date_id"
-  endDate={this.state.endDate}
-  endDateId="your_unique_end_date_id"
-  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+  widget_date={this.state.widget_date}
+  widget_dateId="your_unique_start_date_id"
+  widget_date_to={this.state.widget_date_to}
+  widget_date_toId="your_unique_end_date_id"
+  onDatesChange={({ widget_date, widget_date_to }) => this.setState({ widget_date, widget_date_to })}
   focusedInput={this.state.focusedInput}
   onFocusChange={focusedInput => this.setState({ focusedInput })}
 />

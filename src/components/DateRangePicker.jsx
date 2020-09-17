@@ -45,19 +45,19 @@ const propTypes = forbidExtraProps({
 
 const defaultProps = {
   // required props for a functional interactive DateRangePicker
-  startDate: null,
-  endDate: null,
+  widget_date: null,
+  widget_date_to: null,
   focusedInput: null,
 
   // input related props
-  startDatePlaceholderText: 'Start Date',
-  endDatePlaceholderText: 'End Date',
-  startDateAriaLabel: undefined,
-  endDateAriaLabel: undefined,
-  startDateTitleText: undefined,
-  endDateTitleText: undefined,
-  startDateOffset: undefined,
-  endDateOffset: undefined,
+  widget_datePlaceholderText: 'Start Date',
+  widget_date_toPlaceholderText: 'End Date',
+  widget_dateAriaLabel: undefined,
+  widget_date_toAriaLabel: undefined,
+  widget_dateTitleText: undefined,
+  widget_date_toTitleText: undefined,
+  widget_dateOffset: undefined,
+  widget_date_toOffset: undefined,
   disabled: false,
   required: false,
   readOnly: false,
@@ -201,8 +201,8 @@ class DateRangePicker extends React.PureComponent {
     const {
       onFocusChange,
       onClose,
-      startDate,
-      endDate,
+      widget_date,
+      widget_date_to,
       appendToBody,
     } = this.props;
 
@@ -216,7 +216,7 @@ class DateRangePicker extends React.PureComponent {
     });
 
     onFocusChange(null);
-    onClose({ startDate, endDate });
+    onClose({ widget_date, widget_date_to });
   }
 
   onDateRangePickerInputFocus(focusedInput) {
@@ -426,10 +426,10 @@ class DateRangePicker extends React.PureComponent {
       daySize,
       enableOutsideDays,
       focusedInput,
-      startDate,
-      startDateOffset,
-      endDate,
-      endDateOffset,
+      widget_date,
+      widget_dateOffset,
+      widget_date_to,
+      widget_date_toOffset,
       minDate,
       maxDate,
       minimumNights,
@@ -464,7 +464,7 @@ class DateRangePicker extends React.PureComponent {
       ? this.onOutsideClick
       : undefined;
     const initialVisibleMonthThunk = initialVisibleMonth || (
-      () => (startDate || endDate || moment())
+      () => (widget_date || widget_date_to || moment())
     );
 
     const closeIcon = customCloseIcon || (
@@ -509,10 +509,10 @@ class DateRangePicker extends React.PureComponent {
           onFocusChange={onFocusChange}
           onClose={onClose}
           focusedInput={focusedInput}
-          startDate={startDate}
-          startDateOffset={startDateOffset}
-          endDate={endDate}
-          endDateOffset={endDateOffset}
+          widget_date={widget_date}
+          widget_dateOffset={widget_dateOffset}
+          widget_date_to={widget_date_to}
+          widget_date_toOffset={widget_date_toOffset}
           minDate={minDate}
           maxDate={maxDate}
           monthFormat={monthFormat}
@@ -570,16 +570,16 @@ class DateRangePicker extends React.PureComponent {
 
   render() {
     const {
-      startDate,
-      startDateId,
-      startDatePlaceholderText,
-      startDateAriaLabel,
-      startDateTitleText,
-      endDate,
-      endDateId,
-      endDatePlaceholderText,
-      endDateAriaLabel,
-      endDateTitleText,
+      widget_date,
+      widget_dateId,
+      widget_datePlaceholderText,
+      widget_dateAriaLabel,
+      widget_dateTitleText,
+      widget_date_to,
+      widget_date_toId,
+      widget_date_toPlaceholderText,
+      widget_date_toAriaLabel,
+      widget_date_toTitleText,
       focusedInput,
       screenReaderInputMessage,
       showClearDates,
@@ -620,18 +620,18 @@ class DateRangePicker extends React.PureComponent {
 
     const input = (
       <DateRangePickerInputController
-        startDate={startDate}
-        startDateId={startDateId}
-        startDatePlaceholderText={startDatePlaceholderText}
-        isStartDateFocused={focusedInput === START_DATE}
-        startDateAriaLabel={startDateAriaLabel}
-        startDateTitleText={startDateTitleText}
-        endDate={endDate}
-        endDateId={endDateId}
-        endDatePlaceholderText={endDatePlaceholderText}
-        isEndDateFocused={focusedInput === END_DATE}
-        endDateAriaLabel={endDateAriaLabel}
-        endDateTitleText={endDateTitleText}
+        widget_date={widget_date}
+        widget_dateId={widget_dateId}
+        widget_datePlaceholderText={widget_datePlaceholderText}
+        iswidget_dateFocused={focusedInput === START_DATE}
+        widget_dateAriaLabel={widget_dateAriaLabel}
+        widget_dateTitleText={widget_dateTitleText}
+        widget_date_to={widget_date_to}
+        widget_date_toId={widget_date_toId}
+        widget_date_toPlaceholderText={widget_date_toPlaceholderText}
+        iswidget_date_toFocused={focusedInput === END_DATE}
+        widget_date_toAriaLabel={widget_date_toAriaLabel}
+        widget_date_toTitleText={widget_date_toTitleText}
         displayFormat={displayFormat}
         showClearDates={showClearDates}
         showCaret={!withPortal && !withFullScreenPortal && !hideFang}

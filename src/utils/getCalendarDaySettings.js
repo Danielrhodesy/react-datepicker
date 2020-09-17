@@ -24,18 +24,18 @@ function getAriaLabel(phrases, modifiers, day, ariaLabelFormat) {
     chooseAvailableDate,
     dateIsUnavailable,
     dateIsSelected,
-    dateIsSelectedAsStartDate,
-    dateIsSelectedAsEndDate,
+    dateIsSelectedAswidget_date,
+    dateIsSelectedAswidget_date_to,
   } = phrases;
 
   const formattedDate = {
     date: day.format(ariaLabelFormat),
   };
 
-  if (modifiers.has('selected-start') && dateIsSelectedAsStartDate) {
-    return getPhrase(dateIsSelectedAsStartDate, formattedDate);
-  } if (modifiers.has('selected-end') && dateIsSelectedAsEndDate) {
-    return getPhrase(dateIsSelectedAsEndDate, formattedDate);
+  if (modifiers.has('selected-start') && dateIsSelectedAswidget_date) {
+    return getPhrase(dateIsSelectedAswidget_date, formattedDate);
+  } if (modifiers.has('selected-end') && dateIsSelectedAswidget_date_to) {
+    return getPhrase(dateIsSelectedAswidget_date_to, formattedDate);
   } if (isSelected(modifiers) && dateIsSelected) {
     return getPhrase(dateIsSelected, formattedDate);
   } if (modifiers.has(BLOCKED_MODIFIER)) {

@@ -148,7 +148,7 @@ function SingleDatePickerInput({
       {...css(styles.SingleDatePickerInput_calendarIcon)}
       type="button"
       disabled={disabled}
-      aria-label={phrases.focusStartDate}
+      aria-label={phrases.focuswidget_date}
       onClick={onFocus}
     >
       {calendarIcon}

@@ -121,36 +121,36 @@ describe('DateRangePickerInput', () => {
     describe('props.disabled=START_DATE', () => {
       it('First DateInput gets disabled prop, second does not', () => {
         const wrapper = shallow(<DateRangePickerInput disabled={START_DATE} />).dive();
-        const [startDateInput, endDateInput] = wrapper.find(DateInput);
-        expect(startDateInput.props.disabled).to.equal(true);
-        expect(endDateInput.props.disabled).to.equal(false);
+        const [widget_dateInput, widget_date_toInput] = wrapper.find(DateInput);
+        expect(widget_dateInput.props.disabled).to.equal(true);
+        expect(widget_date_toInput.props.disabled).to.equal(false);
       });
     });
 
     describe('props.disabled=END_DATE', () => {
       it('First DateInput gets disabled prop, second does not', () => {
         const wrapper = shallow(<DateRangePickerInput disabled={END_DATE} />).dive();
-        const [startDateInput, endDateInput] = wrapper.find(DateInput);
-        expect(startDateInput.props.disabled).to.equal(false);
-        expect(endDateInput.props.disabled).to.equal(true);
+        const [widget_dateInput, widget_date_toInput] = wrapper.find(DateInput);
+        expect(widget_dateInput.props.disabled).to.equal(false);
+        expect(widget_date_toInput.props.disabled).to.equal(true);
       });
     });
 
     describe('props.disabled=true', () => {
       it('First DateInput gets disabled prop, second does not', () => {
         const wrapper = shallow(<DateRangePickerInput disabled />).dive();
-        const [startDateInput, endDateInput] = wrapper.find(DateInput);
-        expect(startDateInput.props.disabled).to.equal(true);
-        expect(endDateInput.props.disabled).to.equal(true);
+        const [widget_dateInput, widget_date_toInput] = wrapper.find(DateInput);
+        expect(widget_dateInput.props.disabled).to.equal(true);
+        expect(widget_date_toInput.props.disabled).to.equal(true);
       });
     });
 
     describe('props.disabled=false', () => {
       it('First DateInput gets disabled prop, second does not', () => {
         const wrapper = shallow(<DateRangePickerInput disabled={false} />).dive();
-        const [startDateInput, endDateInput] = wrapper.find(DateInput);
-        expect(startDateInput.props.disabled).to.equal(false);
-        expect(endDateInput.props.disabled).to.equal(false);
+        const [widget_dateInput, widget_date_toInput] = wrapper.find(DateInput);
+        expect(widget_dateInput.props.disabled).to.equal(false);
+        expect(widget_date_toInput.props.disabled).to.equal(false);
       });
     });
   });

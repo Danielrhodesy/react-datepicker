@@ -117,7 +117,7 @@ how to properly wrap the pickers in the [examples folder](https://github.com/air
 
 #### DateRangePicker
 The `DateRangePicker` is a fully controlled component that allows users to select a date range. You can control the selected
-dates using the `startDate`, `endDate`, and `onDatesChange` props as shown below. The `DateRangePicker` also manages internal
+dates using the `widget_date`, `widget_date_to`, and `onDatesChange` props as shown below. The `DateRangePicker` also manages internal
 state for partial dates entered by typing (although `onDatesChange` will not trigger until a date has been entered
 completely in that case). Similarly, you can control which input is focused as well as calendar visibility (the calendar is
 only visible if `focusedInput` is defined) with the `focusedInput` and `onFocusChange` props as shown below.
@@ -125,11 +125,11 @@ only visible if `focusedInput` is defined) with the `focusedInput` and `onFocusC
 Here is the minimum *REQUIRED* setup you need to get the `DateRangePicker` working:
 ```jsx
 <DateRangePicker
-  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-  startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-  endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+  widget_date={this.state.widget_date} // momentPropTypes.momentObj or null,
+  widget_dateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+  widget_date_to={this.state.widget_date_to} // momentPropTypes.momentObj or null,
+  widget_date_toId="your_unique_end_date_id" // PropTypes.string.isRequired,
+  onDatesChange={({ widget_date, widget_date_to }) => this.setState({ widget_date, widget_date_to })} // PropTypes.func.isRequired,
   focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
   onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
 />
@@ -138,12 +138,12 @@ Here is the minimum *REQUIRED* setup you need to get the `DateRangePicker` worki
 The following is a list of other *OPTIONAL* props you may provide to the `DateRangePicker` to customize appearance and behavior to your heart's desire. All constants (indicated by `ALL_CAPS`) are provided as named exports in `react-dates/constants`. Please explore the [storybook](http://airbnb.io/react-dates/?selectedKind=DRP%20-%20Input%20Props&selectedStory=default&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel) for more information on what each of these props do.
 ```js
 // input related props
-startDatePlaceholderText: PropTypes.string,
-endDatePlaceholderText: PropTypes.string,
-startDateAriaLabel: PropTypes.string,
-endDateAriaLabel: PropTypes.string,
-startDateTitleText: PropTypes.string,
-endDateTitleText: PropTypes.string,
+widget_datePlaceholderText: PropTypes.string,
+widget_date_toPlaceholderText: PropTypes.string,
+widget_dateAriaLabel: PropTypes.string,
+widget_date_toAriaLabel: PropTypes.string,
+widget_dateTitleText: PropTypes.string,
+widget_date_toTitleText: PropTypes.string,
 disabled: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf([START_DATE, END_DATE])]),
 required: PropTypes.bool,
 readOnly: PropTypes.bool,
@@ -293,14 +293,14 @@ dayAriaLabelFormat: PropTypes.string,
 #### DayPickerRangeController
 The `DayPickerRangeController` is a calendar-only version of the `DateRangePicker`. There are no inputs (which also means
 that currently, it is not keyboard accessible) and the calendar is always visible, but you can select a date range much in the same way you would with the `DateRangePicker`. You can control the selected
-dates using the `startDate`, `endDate`, and `onDatesChange` props as shown below. Similarly, you can control which input is focused with the `focusedInput` and `onFocusChange` props as shown below. The user will only be able to select a date if `focusedInput` is provided.
+dates using the `widget_date`, `widget_date_to`, and `onDatesChange` props as shown below. Similarly, you can control which input is focused with the `focusedInput` and `onFocusChange` props as shown below. The user will only be able to select a date if `focusedInput` is provided.
 
 Here is the minimum *REQUIRED* setup you need to get the `DayPickerRangeController` working:
 ```jsx
 <DayPickerRangeController
-  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+  widget_date={this.state.widget_date} // momentPropTypes.momentObj or null,
+  widget_date_to={this.state.widget_date_to} // momentPropTypes.momentObj or null,
+  onDatesChange={({ widget_date, widget_date_to }) => this.setState({ widget_date, widget_date_to })} // PropTypes.func.isRequired,
   focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
   onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
   initialVisibleMonth={() => moment().add(2, "M")} // PropTypes.func or null,

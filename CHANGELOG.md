@@ -40,7 +40,7 @@
 
 ## 21.3.2
 
-- [fix] Revert "Call getStateForNewMonth when date/startDate/endDate is set to a date that is not visible" ([#1851](https://github.com/airbnb/react-dates/pull/1851))
+- [fix] Revert "Call getStateForNewMonth when date/widget_date/widget_date_to is set to a date that is not visible" ([#1851](https://github.com/airbnb/react-dates/pull/1851))
 
 ## 21.3.1
 
@@ -53,7 +53,7 @@
 
 ## 21.2.1
 
-- [fix] Call getStateForNewMonth when date/startDate/endDate is set to a date that is not visible ([#1834](https://github.com/airbnb/react-dates/pull/1834))
+- [fix] Call getStateForNewMonth when date/widget_date/widget_date_to is set to a date that is not visible ([#1834](https://github.com/airbnb/react-dates/pull/1834))
 
 ## 21.2.0
 
@@ -91,7 +91,7 @@
 
 ## 20.2.5
 - [fix] Defer day focusing until next animation frame ([#1707](https://github.com/airbnb/react-dates/pull/1707))
-- [fix] Fix startDate style (@mmarkelov, [#1710](https://github.com/airbnb/react-dates/pull/1710))
+- [fix] Fix widget_date style (@mmarkelov, [#1710](https://github.com/airbnb/react-dates/pull/1710))
 - [fix] Pass correct props to SingleDatePicker on close (@AlokTakshak, [#1678](https://github.com/airbnb/react-dates/pull/1678))
 - [dev] Update blocked navigation (min/maxDate) stories (@ianduvall, [#1598](https://github.com/airbnb/react-dates/pull/1598))
 - [dev] Add positioning to custom navigation in stories (@dougmacknz, [#1573](https://github.com/airbnb/react-dates/pull/1573))
@@ -145,7 +145,7 @@
 
 ## 18.5.0
 - [fix] Add `aria-disabled` attribute to the (Customizable)CalendarDay ([#1521](https://github.com/airbnb/react-dates/pull/1521))
-- [new] Add `startDateOffset` and `endDateOffset` props to the DRP ([#1252](https://github.com/airbnb/react-dates/pull/1252))
+- [new] Add `widget_dateOffset` and `widget_date_toOffset` props to the DRP ([#1252](https://github.com/airbnb/react-dates/pull/1252))
 
 ## 18.4.1
 - [fix] Make DRP and SDP calendars tabbable from the inputs ([#1499](https://github.com/airbnb/react-dates/pull/1499))
@@ -258,7 +258,7 @@
 ## 16.4.0
 - [new] Export `OutsideClickHandler` in index.js ([#1089](https://github.com/airbnb/react-dates/pull/1089))
 - [fix] Do not apply `verticalSpacing` when `withPortal` or `withFullScreenPortal` is true ([#980](https://github.com/airbnb/react-dates/pull/980))
-- [fix] Handle minimum nights when selecting `startDate` ([#1015](https://github.com/airbnb/react-dates/pull/1015))
+- [fix] Handle minimum nights when selecting `widget_date` ([#1015](https://github.com/airbnb/react-dates/pull/1015))
 - [fix] Fix style of `CloseIcon` in the SDP ([#1058](https://github.com/airbnb/react-dates/pull/1058))
 
 ## 16.3.6
@@ -290,7 +290,7 @@
 - [fix] SDP `block` styling also makes the input full width ([#972](https://github.com/airbnb/react-dates/pull/972))
 
 ## 16.2.0
-- [new] Add `startDateOffset`/`endDateOffset` props to `DayPickerRangeController` ([#884](https://github.com/airbnb/react-dates/pull/884))
+- [new] Add `widget_dateOffset`/`widget_date_toOffset` props to `DayPickerRangeController` ([#884](https://github.com/airbnb/react-dates/pull/884))
 - [fix] Make all styles inline in `CustomizableCalendarDay` ([#964](https://github.com/airbnb/react-dates/pull/964))
 
 ## 16.1.1
@@ -329,7 +329,7 @@
 
 ## 15.3.0
 - [new] Add `transitionDuration` prop ([#865](https://github.com/airbnb/react-dates/pull/865))
-- [fix] Remove default prop values for required startDateId and endDateId props ([#866](https://github.com/airbnb/react-dates/pull/866))
+- [fix] Remove default prop values for required widget_dateId and widget_date_toId props ([#866](https://github.com/airbnb/react-dates/pull/866))
 - [new] Add `block` styling prop ([#871](https://github.com/airbnb/react-dates/pull/871))
 - [new] Add `noBorder` prop to `DayPicker` variations ([#869](https://github.com/airbnb/react-dates/pull/869))
 - [new] Add `noBorder` prop to inputs ([#870](https://github.com/airbnb/react-dates/pull/870))
@@ -517,7 +517,7 @@
 - [fix] Fix caption alignment when using bootstrap ([#323](https://github.com/airbnb/react-dates/pull/323))
 
 ## v7.0.1
-- [fix] Fix minimum nights issues for startDates/endDates with time ([#310](https://github.com/airbnb/react-dates/pull/310))
+- [fix] Fix minimum nights issues for widget_dates/widget_date_tos with time ([#310](https://github.com/airbnb/react-dates/pull/310))
 
 ## v7.0.0
 - [breaking] Simplify `CalendarDay` DOM ([#291](https://github.com/airbnb/react-dates/pull/291))
