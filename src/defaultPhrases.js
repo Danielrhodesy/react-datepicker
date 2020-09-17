@@ -1,7 +1,7 @@
 const calendarLabel = 'Calendar';
 const roleDescription = 'datepicker';
 const closeDatePicker = 'Close';
-const focusStartDate = 'Interact with the calendar and add the check-in date for your trip.';
+const focuswidget_date = 'Interact with the calendar and add the check-in date for your trip.';
 const clearDate = 'Clear Date';
 const clearDates = 'Clear Dates';
 const jumpToPrevMonth = 'Move backward to switch to the previous month.';
@@ -26,19 +26,19 @@ const returnFocusToInput = 'Return to the date input field.';
 const keyboardForwardNavigationInstructions = 'Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.';
 const keyboardBackwardNavigationInstructions = 'Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.';
 
-const chooseAvailableStartDate = ({ date }) => `Choose ${date} as your check-in date. It’s available.`;
-const chooseAvailableEndDate = ({ date }) => `Choose ${date} as your check-out date. It’s available.`;
+const chooseAvailablewidget_date = ({ date }) => `Choose ${date} as your check-in date. It’s available.`;
+const chooseAvailablewidget_date_to = ({ date }) => `Choose ${date} as your check-out date. It’s available.`;
 const chooseAvailableDate = ({ date }) => date;
 const dateIsUnavailable = ({ date }) => `Not available. ${date}`;
 const dateIsSelected = ({ date }) => `Selected. ${date}`;
-const dateIsSelectedAsStartDate = ({ date }) => `Selected as start date. ${date}`;
-const dateIsSelectedAsEndDate = ({ date }) => `Selected as end date. ${date}`;
+const dateIsSelectedAswidget_date = ({ date }) => `Selected as start date. ${date}`;
+const dateIsSelectedAswidget_date_to = ({ date }) => `Selected as end date. ${date}`;
 
 export default {
   calendarLabel,
   roleDescription,
   closeDatePicker,
-  focusStartDate,
+  focuswidget_date,
   clearDate,
   clearDates,
   jumpToPrevMonth,
@@ -63,12 +63,12 @@ export default {
   keyboardForwardNavigationInstructions,
   keyboardBackwardNavigationInstructions,
 
-  chooseAvailableStartDate,
-  chooseAvailableEndDate,
+  chooseAvailablewidget_date,
+  chooseAvailablewidget_date_to,
   dateIsUnavailable,
   dateIsSelected,
-  dateIsSelectedAsStartDate,
-  dateIsSelectedAsEndDate,
+  dateIsSelectedAswidget_date,
+  dateIsSelectedAswidget_date_to,
 };
 
 export const DateRangePickerPhrases = {
@@ -76,7 +76,7 @@ export const DateRangePickerPhrases = {
   roleDescription,
   closeDatePicker,
   clearDates,
-  focusStartDate,
+  focuswidget_date,
   jumpToPrevMonth,
   jumpToNextMonth,
   keyboardShortcuts,
@@ -98,16 +98,16 @@ export const DateRangePickerPhrases = {
   returnFocusToInput,
   keyboardForwardNavigationInstructions,
   keyboardBackwardNavigationInstructions,
-  chooseAvailableStartDate,
-  chooseAvailableEndDate,
+  chooseAvailablewidget_date,
+  chooseAvailablewidget_date_to,
   dateIsUnavailable,
   dateIsSelected,
-  dateIsSelectedAsStartDate,
-  dateIsSelectedAsEndDate,
+  dateIsSelectedAswidget_date,
+  dateIsSelectedAswidget_date_to,
 };
 
 export const DateRangePickerInputPhrases = {
-  focusStartDate,
+  focuswidget_date,
   clearDates,
   keyboardForwardNavigationInstructions,
   keyboardBackwardNavigationInstructions,
@@ -172,13 +172,13 @@ export const DayPickerPhrases = {
   moveFocusByOneMonth,
   moveFocustoStartAndEndOfWeek,
   returnFocusToInput,
-  chooseAvailableStartDate,
-  chooseAvailableEndDate,
+  chooseAvailablewidget_date,
+  chooseAvailablewidget_date_to,
   chooseAvailableDate,
   dateIsUnavailable,
   dateIsSelected,
-  dateIsSelectedAsStartDate,
-  dateIsSelectedAsEndDate,
+  dateIsSelectedAswidget_date,
+  dateIsSelectedAswidget_date_to,
 };
 
 export const DayPickerKeyboardShortcutsPhrases = {
@@ -210,6 +210,6 @@ export const CalendarDayPhrases = {
   chooseAvailableDate,
   dateIsUnavailable,
   dateIsSelected,
-  dateIsSelectedAsStartDate,
-  dateIsSelectedAsEndDate,
+  dateIsSelectedAswidget_date,
+  dateIsSelectedAswidget_date_to,
 };

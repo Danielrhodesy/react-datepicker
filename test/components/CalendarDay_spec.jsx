@@ -62,8 +62,8 @@ describe('CalendarDay', () => {
         phrases.chooseAvailableDate = sinon.stub().returns('chooseAvailableDate text');
         phrases.dateIsSelected = sinon.stub().returns('dateIsSelected text');
         phrases.dateIsUnavailable = sinon.stub().returns('dateIsUnavailable text');
-        phrases.dateIsSelectedAsStartDate = sinon.stub().returns('dateIsSelectedAsStartDate text');
-        phrases.dateIsSelectedAsEndDate = sinon.stub().returns('dateIsSelectedAsEndDate text');
+        phrases.dateIsSelectedAswidget_date = sinon.stub().returns('dateIsSelectedAswidget_date text');
+        phrases.dateIsSelectedAswidget_date_to = sinon.stub().returns('dateIsSelectedAswidget_date_to text');
       });
 
       it('is formatted with the chooseAvailableDate phrase function when day is available', () => {
@@ -108,7 +108,7 @@ describe('CalendarDay', () => {
         expect(wrapper.prop('aria-label')).to.equal('dateIsSelected text');
       });
 
-      it('is formatted with the dateIsSelectedAsStartDate phrase function when day is selected as the start date', () => {
+      it('is formatted with the dateIsSelectedAswidget_date phrase function when day is selected as the start date', () => {
         const modifiers = new Set().add(BLOCKED_MODIFIER).add('selected-start');
 
         const wrapper = shallow((
@@ -119,10 +119,10 @@ describe('CalendarDay', () => {
           />
         )).dive();
 
-        expect(wrapper.prop('aria-label')).to.equal('dateIsSelectedAsStartDate text');
+        expect(wrapper.prop('aria-label')).to.equal('dateIsSelectedAswidget_date text');
       });
 
-      it('is formatted with the dateIsSelectedAsEndDate phrase function when day is selected as the end date', () => {
+      it('is formatted with the dateIsSelectedAswidget_date_to phrase function when day is selected as the end date', () => {
         const modifiers = new Set().add(BLOCKED_MODIFIER).add('selected-end');
 
         const wrapper = shallow((
@@ -133,7 +133,7 @@ describe('CalendarDay', () => {
           />
         )).dive();
 
-        expect(wrapper.prop('aria-label')).to.equal('dateIsSelectedAsEndDate text');
+        expect(wrapper.prop('aria-label')).to.equal('dateIsSelectedAswidget_date_to text');
       });
 
       it('is formatted with the dateIsUnavailable phrase function when day is not available', () => {

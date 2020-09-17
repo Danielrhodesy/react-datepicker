@@ -20,8 +20,8 @@ const describeIfWindow = typeof document === 'undefined' ? describe.skip : descr
 const requiredProps = {
   onDatesChange: () => {},
   onFocusChange: () => {},
-  startDateId: 'startDate',
-  endDateId: 'endDate',
+  widget_dateId: 'widget_date',
+  widget_date_toId: 'widget_date_to',
 };
 
 describe('DateRangePicker', () => {
@@ -289,15 +289,15 @@ describe('DateRangePicker', () => {
       expect(onCloseStub.callCount).to.equal(0);
     });
 
-    it('calls props.onClose with startDate and endDate if props.focusedInput != null', () => {
-      const startDate = moment();
-      const endDate = startDate.add(1, 'days');
+    it('calls props.onClose with widget_date and widget_date_to if props.focusedInput != null', () => {
+      const widget_date = moment();
+      const widget_date_to = widget_date.add(1, 'days');
       const onCloseStub = sinon.stub();
       const wrapper = shallow((
         <DateRangePicker
           {...requiredProps}
-          startDate={startDate}
-          endDate={endDate}
+          widget_date={widget_date}
+          widget_date_to={widget_date_to}
           focusedInput={START_DATE}
           onClose={onCloseStub}
           onFocusChange={() => null}
@@ -307,8 +307,8 @@ describe('DateRangePicker', () => {
       wrapper.instance().onOutsideClick();
       expect(onCloseStub.callCount).to.equal(1);
       const args = onCloseStub.getCall(0).args[0];
-      expect(args.startDate).to.equal(startDate);
-      expect(args.endDate).to.equal(endDate);
+      expect(args.widget_date).to.equal(widget_date);
+      expect(args.widget_date_to).to.equal(widget_date_to);
     });
   });
 
@@ -679,33 +679,33 @@ describe('DateRangePicker', () => {
     });
 
     describe('initialVisibleMonth is not passed in', () => {
-      it('DayPickerRangeController.props.initialVisibleMonth evaluates to startDate', () => {
-        const startDate = moment().add(10, 'days');
+      it('DayPickerRangeController.props.initialVisibleMonth evaluates to widget_date', () => {
+        const widget_date = moment().add(10, 'days');
         const wrapper = shallow((
           <DateRangePicker
             {...requiredProps}
             focusedInput={START_DATE}
-            startDate={startDate}
+            widget_date={widget_date}
           />
         )).dive();
         const dayPicker = wrapper.find(DayPickerRangeController);
-        expect(dayPicker.props().initialVisibleMonth()).to.equal(startDate);
+        expect(dayPicker.props().initialVisibleMonth()).to.equal(widget_date);
       });
 
-      it('DayPickerRangeController.props.initialVisibleMonth evaluates to endDate if !startDate', () => {
-        const endDate = moment().add(5, 'days');
+      it('DayPickerRangeController.props.initialVisibleMonth evaluates to widget_date_to if !widget_date', () => {
+        const widget_date_to = moment().add(5, 'days');
         const wrapper = shallow((
           <DateRangePicker
             {...requiredProps}
             focusedInput={START_DATE}
-            endDate={endDate}
+            widget_date_to={widget_date_to}
           />
         )).dive();
         const dayPicker = wrapper.find(DayPickerRangeController);
-        expect(dayPicker.props().initialVisibleMonth()).to.equal(endDate);
+        expect(dayPicker.props().initialVisibleMonth()).to.equal(widget_date_to);
       });
 
-      it('DayPickerRangeController.props.initialVisibleMonth evaluates to today if !startDate && !endDate', () => {
+      it('DayPickerRangeController.props.initialVisibleMonth evaluates to today if !widget_date && !widget_date_to', () => {
         const today = moment();
         const wrapper = shallow((
           <DateRangePicker {...requiredProps} focusedInput={START_DATE} />
@@ -717,43 +717,43 @@ describe('DateRangePicker', () => {
   });
 
   describe('dateOffsets', () => {
-    describe('startDateOffset is passed in', () => {
-      it('Should pass startDateOffset to DayPickerRangeController', () => {
-        const startDate = moment('2018-10-17');
+    describe('widget_dateOffset is passed in', () => {
+      it('Should pass widget_dateOffset to DayPickerRangeController', () => {
+        const widget_date = moment('2018-10-17');
         const onDatesChangeStub = sinon.stub();
         const wrapper = shallow((
           <DateRangePicker
             {...requiredProps}
-            startDateOffset={(date) => date.subtract(5, 'days')}
+            widget_dateOffset={(date) => date.subtract(5, 'days')}
             onDatesChange={onDatesChangeStub}
             focusedInput={START_DATE}
           />
         )).dive();
 
         const dayPicker = wrapper.find(DayPickerRangeController);
-        const dayPickerStartDateOffset = dayPicker.props().startDateOffset(startDate);
+        const dayPickerwidget_dateOffset = dayPicker.props().widget_dateOffset(widget_date);
 
-        expect(dayPickerStartDateOffset.format()).to.equal(startDate.format());
+        expect(dayPickerwidget_dateOffset.format()).to.equal(widget_date.format());
       });
     });
 
-    describe('endDateOffset is passed in', () => {
-      it('Should pass endDateOffset to DayPickerRangeController', () => {
-        const endDate = moment('2018-10-17', 'YYYY-MM-DD');
+    describe('widget_date_toOffset is passed in', () => {
+      it('Should pass widget_date_toOffset to DayPickerRangeController', () => {
+        const widget_date_to = moment('2018-10-17', 'YYYY-MM-DD');
         const onDatesChangeStub = sinon.stub();
         const wrapper = shallow((
           <DateRangePicker
             {...requiredProps}
-            endDateOffset={(date) => date.subtract(5, 'days')}
+            widget_date_toOffset={(date) => date.subtract(5, 'days')}
             onDatesChange={onDatesChangeStub}
             focusedInput={START_DATE}
           />
         )).dive();
 
         const dayPicker = wrapper.find(DayPickerRangeController);
-        const dayPickerEndDateOffset = dayPicker.props().endDateOffset(endDate);
+        const dayPickerwidget_date_toOffset = dayPicker.props().widget_date_toOffset(widget_date_to);
 
-        expect(dayPickerEndDateOffset.format()).to.equal(endDate.format());
+        expect(dayPickerwidget_date_toOffset.format()).to.equal(widget_date_to.format());
       });
     });
   });

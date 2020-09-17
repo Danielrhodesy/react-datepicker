@@ -21,7 +21,7 @@ const dayPickerRangeControllerInfo = `The ${monospace('DayPickerRangeController'
   date range. Unlike the ${monospace('DayPicker')}, which requires the consumer to explicitly define
   ${monospace('onDayMouseEnter')}, ${monospace('onDayMouseLeave')}, and ${monospace('onDayClick')}
   handlers, the consumer needs simply to maintain the ${monospace('focusedInput')},
-  ${monospace('startDate')}, and ${monospace('endDate')} values in state and then pass these down as
+  ${monospace('widget_date')}, and ${monospace('widget_date_to')} values in state and then pass these down as
   props along with ${monospace('onFocusChange')} and ${monospace('onDatesChange')} callbacks that
   update them appropriately. You can see an example of this implementation <a href=
   "https://github.com/airbnb/react-dates/blob/master/examples/DayPickerRangeControllerWrapper.jsx">
@@ -347,8 +347,8 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      startDateOffset={(day) => day.subtract(3, 'days')}
-      endDateOffset={(day) => day.add(3, 'days')}
+      widget_dateOffset={(day) => day.subtract(3, 'days')}
+      widget_date_toOffset={(day) => day.add(3, 'days')}
     />
   )))
   .add('with 45 days range selection', withInfo()(() => (
@@ -356,8 +356,8 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      startDateOffset={(day) => day.subtract(22, 'days')}
-      endDateOffset={(day) => day.add(22, 'days')}
+      widget_dateOffset={(day) => day.subtract(22, 'days')}
+      widget_date_toOffset={(day) => day.add(22, 'days')}
     />
   )))
   .add('with 4 days after today range selection', withInfo()(() => (
@@ -365,7 +365,7 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      endDateOffset={(day) => day.add(4, 'days')}
+      widget_date_toOffset={(day) => day.add(4, 'days')}
     />
   )))
   .add('with current week range selection', withInfo()(() => (
@@ -373,8 +373,8 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      startDateOffset={(day) => day.startOf('week')}
-      endDateOffset={(day) => day.endOf('week')}
+      widget_dateOffset={(day) => day.startOf('week')}
+      widget_date_toOffset={(day) => day.endOf('week')}
     />
   )))
   .add('with custom inputs', withInfo()(() => (
@@ -598,8 +598,8 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      initialStartDate={moment().add(3, 'days')}
-      autoFocusEndDate
+      initialwidget_date={moment().add(3, 'days')}
+      autoFocuswidget_date_to
     />
   )))
   .add('allows single day range', withInfo()(() => (
@@ -608,8 +608,8 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      initialStartDate={moment().add(3, 'days')}
-      autoFocusEndDate
+      initialwidget_date={moment().add(3, 'days')}
+      autoFocuswidget_date_to
     />
   )))
   .add('allows all days, including past days', withInfo()(() => (
@@ -781,7 +781,7 @@ storiesOf('DayPickerRangeController', module)
       onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
       onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
       onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-      initialStartDate={moment().add(3, 'days')}
-      autoFocusEndDate
+      initialwidget_date={moment().add(3, 'days')}
+      autoFocuswidget_date_to
     />
   )));

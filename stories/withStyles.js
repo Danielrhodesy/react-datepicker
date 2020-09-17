@@ -182,11 +182,11 @@ storiesOf('withStyles', module)
       </div>
 
       <div style={{ marginTop: 8 }}>
-        <DateRangePickerInput isStartDateFocused />
+        <DateRangePickerInput iswidget_dateFocused />
       </div>
 
       <div style={{ marginTop: 8 }}>
-        <DateRangePickerInput isEndDateFocused />
+        <DateRangePickerInput iswidget_date_toFocused />
       </div>
 
       <div style={{ marginTop: 8 }}>
@@ -194,7 +194,7 @@ storiesOf('withStyles', module)
       </div>
 
       <div style={{ marginTop: 8 }}>
-        <DateRangePickerInput showClearDates startDate="Test" />
+        <DateRangePickerInput showClearDates widget_date="Test" />
       </div>
 
       <div style={{ marginTop: 8 }}>

@@ -76,8 +76,8 @@ storiesOf('DateRangePicker (DRP)', module)
     return (
       <DateRangePickerWrapper
         showClearDates
-        startDatePlaceholderText="入住日期"
-        endDatePlaceholderText="退房日期"
+        widget_datePlaceholderText="入住日期"
+        widget_date_toPlaceholderText="退房日期"
         monthFormat="YYYY[年]MMMM"
         phrases={{
           closeDatePicker: '关闭',
@@ -93,8 +93,8 @@ storiesOf('DateRangePicker (DRP)', module)
       <DateRangePickerWrapper
         isRTL
         stateDateWrapper={momentJalaali}
-        startDatePlaceholderText="تاریخ شروع"
-        endDatePlaceholderText="تاریخ پایان"
+        widget_datePlaceholderText="تاریخ شروع"
+        widget_date_toPlaceholderText="تاریخ پایان"
         renderMonthText={month => momentJalaali(month).format('jMMMM jYYYY')}
         renderDayContents={day => momentJalaali(day).format('jD')}
       />
@@ -103,8 +103,8 @@ storiesOf('DateRangePicker (DRP)', module)
   .add('with DirectionProvider', withInfo()(() => (
     <DirectionProvider direction={DIRECTIONS.RTL}>
       <DateRangePickerWrapper
-        startDatePlaceholderText="تاریخ شروع"
-        endDatePlaceholderText="تاریخ پایان"
+        widget_datePlaceholderText="تاریخ شروع"
+        widget_date_toPlaceholderText="تاریخ پایان"
         anchorDirection={ANCHOR_RIGHT}
         showDefaultInputIcon
         showClearDates
