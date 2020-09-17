@@ -203,7 +203,7 @@ describe('SingleDatePickerInputController', () => {
 
     describe('date string outside range', () => {
       const isOutsideRangeStub = sinon.stub().returns(true);
-      const todayDateString = today.format('DD/MM/YYYY');
+      const todayDateString = today.format('MM/DD/YYYY');
 
       it('calls props.onDateChange once', () => {
         const onDateChangeStub = sinon.stub();
@@ -250,7 +250,7 @@ describe('SingleDatePickerInputController', () => {
 
     describe('date string is blocked', () => {
       const isDayBlocked = sinon.stub().returns(true);
-      const todayDateString = today.format('DD/MM/YYYY');
+      const todayDateString = today.format('MM/DD/YYYY');
 
       it('calls props.onDateChange once', () => {
         const onDateChangeStub = sinon.stub();
