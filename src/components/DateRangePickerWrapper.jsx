@@ -26,6 +26,8 @@ const propTypes = {
   initialwidget_date: momentPropTypes.momentObj,
   initialwidget_date_to: momentPropTypes.momentObj,
 
+  
+
   ...omit(DateRangePickerShape, [
     'widget_date',
     'widget_date_to',
@@ -34,6 +36,17 @@ const propTypes = {
     'onFocusChange',
   ]),
 };
+
+const datesList = [
+  moment(),
+  moment().add(1, 'days'),
+  moment().add(3, 'days'),
+  moment().add(9, 'days'),
+  moment().add(10, 'days'),
+  moment().add(11, 'days'),
+  moment().add(12, 'days'),
+  moment().add(13, 'days'),
+];
 
 const defaultProps = {
   // example props for the demo
@@ -118,6 +131,8 @@ class DateRangePickerWrapper extends React.Component {
     this.onFocusChange = this.onFocusChange.bind(this);
   }
 
+  
+
   onDatesChange({ widget_date, widget_date_to }) {
     const { stateDateWrapper } = this.props;
     this.setState({
@@ -128,6 +143,17 @@ class DateRangePickerWrapper extends React.Component {
 
   onFocusChange(focusedInput) {
     this.setState({ focusedInput });
+  }
+
+  // isBlocked(day) {
+  //   const availableDates = ["20-09-2020", "2020-09-23", "2020-09-24", "2020-09-25", "2020-09-27","2020-09-28"]
+  //   return availableDates.some(date => day.isSame(date), 'day')
+  // }
+
+  isDayBlocked(day) {
+    // const unavailableDays = this.props.value
+    const unavailableDays = ["20-09-2020", "2020-09-23", "2020-09-24", "2020-09-25", "2020-09-27","2020-09-28"]
+    return unavailableDays.some((unavailableDay) => moment(unavailableDay).isSame(day, 'day'));
   }
 
   render() {
@@ -155,6 +181,10 @@ class DateRangePickerWrapper extends React.Component {
                 focusedInput={focusedInput}
                 widget_date={widget_date}
                 widget_date_to={widget_date_to}
+                displayFormat={() => "DD/MM/YYYY"}
+                isDayBlocked={this.isDayBlocked}
+                // isDayBlocked={day1 => datesList.some(day2 => isSameDay(day1, day2))}
+                // autoFocus
                 // displayFormat={"DD-MM-YYYY"}
             />
             <input type="submit" value="Submit" data-wait="Please wait..." class="w-button"/>
