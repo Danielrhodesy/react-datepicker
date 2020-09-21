@@ -1,53 +1,24 @@
-import React, {Component} from 'react'
+import React, {Component, useEffect, useState} from 'react'
 import ReactDOM from 'react-dom'
 import 'react-dates/lib/css/_datepicker.css';
 import 'react-dates/initialize';
 import DateRangePickerWrapper from './components/DateRangePickerWrapper';
+import './react_dates_overrides.css'
 
-
-//API Request for CloudBeds Reservation Data
-  // Begin accessing JSON data here
-
-
-const request = new XMLHttpRequest()
-
-request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
-
-let data
-
-request.onload = function () {
-   let data = JSON.parse(this.response)
-
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach((movie) => {
-      console.log(movie.title)
-    })
-  } else {
-    console.log('error')
-  }
-}
-
-console.log(data,"outside")
-
-request.send()
 
 
 
     class App extends Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-          
-          };
-        }
         render() {
-            return (
-                <>
-                    <DateRangePickerWrapper value={this.state.child1}/> 
-                </>
-            )
+
+                return (
+                    <div>  
+                      <DateRangePickerWrapper/>
+                    </div>
+                )
+            }
         }
-    }
+    
 
 ReactDOM.render(
 React.createElement(App, {}, null),

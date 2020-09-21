@@ -145,17 +145,6 @@ class DateRangePickerWrapper extends React.Component {
     this.setState({ focusedInput });
   }
 
-  // isBlocked(day) {
-  //   const availableDates = ["20-09-2020", "2020-09-23", "2020-09-24", "2020-09-25", "2020-09-27","2020-09-28"]
-  //   return availableDates.some(date => day.isSame(date), 'day')
-  // }
-
-  isDayBlocked(day) {
-    // const unavailableDays = this.props.value
-    const unavailableDays = ["20-09-2020", "2020-09-23", "2020-09-24", "2020-09-25", "2020-09-27","2020-09-28"]
-    return unavailableDays.some((unavailableDay) => moment(unavailableDay).isSame(day, 'day'));
-  }
-
   render() {
     const { focusedInput, widget_date, widget_date_to } = this.state;
 
@@ -172,7 +161,7 @@ class DateRangePickerWrapper extends React.Component {
 
     return (
       <div>
-        <form method="post" action="https://hotels.cloudbeds.com/reservas/UZZgsG">
+        <form id="react-date-picker" method="post" action="https://hotels.cloudbeds.com/reservas/UZZgsG">
             <input type="hidden" name="date_format" value="d/m/Y"/>
             <DateRangePicker
                 {...props}
@@ -182,12 +171,8 @@ class DateRangePickerWrapper extends React.Component {
                 widget_date={widget_date}
                 widget_date_to={widget_date_to}
                 displayFormat={() => "DD/MM/YYYY"}
-                isDayBlocked={this.isDayBlocked}
-                // isDayBlocked={day1 => datesList.some(day2 => isSameDay(day1, day2))}
-                // autoFocus
-                // displayFormat={"DD-MM-YYYY"}
             />
-            <input type="submit" value="Submit" data-wait="Please wait..." class="w-button"/>
+            {/* <input type="submit" value="Submit" data-wait="Please wait..." class="w-button"/> */}
         </form>
       </div>
 

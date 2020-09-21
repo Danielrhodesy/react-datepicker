@@ -1,0 +1,46 @@
+body {
+    font-family: raleway;
+}
+
+.CalendarDay__selected {
+    background: #0F1527;
+    color: white;
+    border: 1px double #0F1527;
+  }
+
+  .CalendarDay__selected_span{
+    background: #EAEDF2;
+    border: 1px double rgb(71, 74, 83);
+    color: #0F1527;
+  } 
+  .CalendarDay__selected_span:hover{
+    background: #EAEDF2;
+    border: 1px double rgb(71, 74, 83);
+    color: #0F1527;
+  } 
+  
+  .CalendarDay__Default{
+    background: #EAEDF2;
+    border: 1px double rgb(71, 74, 83);
+    color: #0F1527;
+  }
+  
+.CalendarDay__selected:hover {
+        background: #0F1527;
+        color: white;
+        border: 1px double rgb(71, 74, 83);
+    }
+
+
+.CalendarDay__hovered_span {
+    background: #EAEDF2;
+    color: #0F1527;
+    border: 1px double rgb(71, 74, 83);
+}
+
+.CalendarDay__hovered_span:hover{
+    background: #EAEDF2;
+    color: #0F1527;
+    border: 1px double rgb(71, 74, 83);
+}
+

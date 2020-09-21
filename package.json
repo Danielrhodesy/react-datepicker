@@ -123,6 +123,7 @@
   },
   "dependencies": {
     "airbnb-prop-types": "^2.15.0",
+    "axios": "^0.20.0",
     "consolidated-events": "^1.1.1 || ^2.0.0",
     "enzyme-shallow-equal": "^1.0.0",
     "express": "^4.17.1",
