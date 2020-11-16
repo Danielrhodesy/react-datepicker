@@ -1,3 +1,25 @@
+# Deploying react-dates to AWS Bucket
+
+```sh
+ npm run webbuild && npm run deploy
+```
+Runs webpack and then deploys file to the AWS Bucket. File then hosted onto Webflow Site In Custom Code Tab.
+
+```sh
+npm start
+```
+This is to start the local server.
+
+# Seperate pickers for each Language
+
+- English
+
+- Chinese
+
+- Japanese
+
+# react-dates
+
 # react-dates <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![Build Status][travis-svg]][travis-url]
