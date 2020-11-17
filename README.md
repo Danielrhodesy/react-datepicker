@@ -13,10 +13,19 @@ This is to start the local server.
 # Seperate pickers for each Language
 
 - English
+```sh
+  git checkout master
+```
 
 - Chinese
+  ```sh
+  git checkout react-datepicker-chinese
+  ```
 
 - Japanese
+```sh
+  git checkout react-datepicker-japanese
+  ```
 
 # react-dates
 
