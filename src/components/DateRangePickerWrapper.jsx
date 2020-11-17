@@ -173,7 +173,7 @@ class DateRangePickerWrapper extends React.Component {
                 displayFormat={() => "DD/MM/YYYY"}
             />
             <div class="div-block-49">
-              <input type="submit" value="お問い合わせ" data-wait="Please wait..." class="button-stay w-button"/>
+              <input type="submit" value="空室状況確認" data-wait="Please wait..." class="button-stay w-button"/>
             </div>
         </form>
       </div>

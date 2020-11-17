@@ -13,6 +13,7 @@ body {
     border: 1px double rgb(71, 74, 83);
     color: #0F1527;
   } 
+  
   .CalendarDay__selected_span:hover{
     background: #EAEDF2;
     border: 1px double rgb(71, 74, 83);
