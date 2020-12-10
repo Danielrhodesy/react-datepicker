@@ -130,6 +130,7 @@
     "fs": "0.0.1-security",
     "is-touch-device": "^1.0.1",
     "lodash": "^4.1.1",
+    "npm": "^6.14.9",
     "object.assign": "^4.1.0",
     "object.values": "^1.1.0",
     "prop-types": "^15.7.2",

@@ -79,3 +79,20 @@ body {
     justify-content: space-between;
 }
 
+
+
+
+
+
+
+.DateRangePickerInput {
+    width: 10rem;
+}
+
+.DateInput {
+    width: 3rem;
+}
+
+.DateInput_input{
+    font-size: 0.8rem;
+}
