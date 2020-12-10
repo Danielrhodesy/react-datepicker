@@ -160,7 +160,7 @@ class DateRangePickerWrapper extends React.Component {
     ]);
 
     return (
-      <div className="dp-container">
+      <div className="dp-container booking-wrap">
         <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/UZZgsG">
             <input type="hidden" name="date_format" value="d/m/Y"/>
             <DateRangePicker
@@ -172,7 +172,7 @@ class DateRangePickerWrapper extends React.Component {
                 widget_date_to={widget_date_to}
                 displayFormat={() => "DD/MM/YYYY"}
             />
-            <div class="div-block-49">
+            <div class="">
               <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
             </div>
         </form>
