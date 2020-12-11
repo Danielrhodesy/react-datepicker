@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "webbuild": "webpack",
-    "deploy": "aws s3 cp ./dist/bundle.js s3://mandala-date-picker-home/ --acl public-read",
+    "deploy": "aws s3 cp ./dist/bundle.js s3://mandala-date-picker-bay/ --acl public-read",
     "build": "npm run build:cjs && npm run build:esm && npm run build:css -- --optimize ",
     "build:cjs": "BABEL_ENV=cjs babel src/ -d lib/",
     "build:esm": "BABEL_ENV=esm babel src/ -d esm/",
