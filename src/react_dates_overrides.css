@@ -1,6 +1,4 @@
-body {
-    font-family: raleway;
-}
+
 
 .CalendarDay__selected {
     background: #0F1527;
@@ -58,7 +56,6 @@ body {
     background: #0F1527;
     border-radius: 2rem;
     color: white;
-    font-family: Lato;
     font-weight: 400;
     font-size: 12px;
     border: 0;
