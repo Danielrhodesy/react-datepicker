@@ -86,13 +86,24 @@ body {
 
 
 .DateRangePickerInput {
-    width: 10rem;
+    width: 12rem;
 }
 
 .DateInput {
-    width: 3rem;
+    width: 5.1rem;
 }
 
 .DateInput_input{
     font-size: 0.8rem;
+}
+
+.DateRangePickerInput__withBorder {
+    border: 1px solid black;
+}
+
+
+.DateRangePickerInput input{
+    padding-top:20px;
+    padding-bottom: 20px;
+    color: #262626;
 }
