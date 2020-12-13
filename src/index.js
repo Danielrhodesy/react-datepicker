@@ -22,7 +22,7 @@ import './react_dates_overrides.css'
 
 ReactDOM.render(
 React.createElement(App, {}, null),
-document.getElementById('react-datepicker-bay')
+document.getElementById('react-datepicker-bays')
 );
 
 
