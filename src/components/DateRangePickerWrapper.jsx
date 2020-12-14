@@ -14,6 +14,7 @@ import {
   END_DATE,
   HORIZONTAL_ORIENTATION,
   ANCHOR_LEFT,
+  ANCHOR_RIGHT,
   NAV_POSITION_TOP,
 } from '../constants';
 import isInclusivelyAfterDay from '../utils/isInclusivelyAfterDay';
@@ -75,7 +76,7 @@ const defaultProps = {
   // calendar presentation and interaction related props
   renderMonthText: null,
   orientation: HORIZONTAL_ORIENTATION,
-  anchorDirection: ANCHOR_LEFT,
+  anchorDirection: ANCHOR_RIGHT,
   horizontalMargin: 0,
   withPortal: false,
   withFullScreenPortal: false,
@@ -157,6 +158,9 @@ class DateRangePickerWrapper extends React.Component {
       'initialwidget_date',
       'initialwidget_date_to',
       'stateDateWrapper',
+      'horizontalMargin',
+      'anchorDirection',
+      'orientation'
     ]);
 
     return (
