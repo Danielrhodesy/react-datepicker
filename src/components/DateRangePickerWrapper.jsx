@@ -5,6 +5,11 @@ import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 import omit from 'lodash/omit';
 
+import Responsive from "react-responsive";
+export const Mobile = props => <Responsive {...props} maxWidth={767} />;
+export const Default = props => <Responsive {...props} minWidth={768} />;
+
+
 import DateRangePicker from './DateRangePicker';
 
 import { DateRangePickerPhrases } from '../defaultPhrases';
@@ -12,10 +17,15 @@ import DateRangePickerShape from '../shapes/DateRangePickerShape';
 import {
   START_DATE,
   END_DATE,
+  VERTICAL_ORIENTATION,
   HORIZONTAL_ORIENTATION,
   ANCHOR_LEFT,
+  ANCHOR_RIGHT,
   NAV_POSITION_TOP,
+  OPEN_UP,
+  OPEN_DOWN
 } from '../constants';
+
 import isInclusivelyAfterDay from '../utils/isInclusivelyAfterDay';
 
 const propTypes = {
@@ -160,22 +170,51 @@ class DateRangePickerWrapper extends React.Component {
     ]);
 
     return (
-      <div className="dp-container">
-        <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservation/xwzk8Z">
-            <input type="hidden" name="date_format" value="d/m/Y"/>
-            <DateRangePicker
-                {...props}
-                onDatesChange={this.onDatesChange}
-                onFocusChange={this.onFocusChange}
-                focusedInput={focusedInput}
-                widget_date={widget_date}
-                widget_date_to={widget_date_to}
-                displayFormat={() => "DD/MM/YYYY"}
-            />
-              <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
-        </form>
-      </div>
+       <>
+      <Default>
+        <div className="dp-container">
+          <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/xwzk8Z">
+              <input type="hidden" name="date_format" value="d/m/Y"/>
+              <DateRangePicker
+                  {...props}
+                  onDatesChange={this.onDatesChange}
+                  onFocusChange={this.onFocusChange}
+                  focusedInput={focusedInput}
+                  widget_date={widget_date}
+                  widget_date_to={widget_date_to}
+                  displayFormat={() => "DD/MM/YYYY"}
+                  orientation={HORIZONTAL_ORIENTATION}
+                  numberOfMonths= {2}
+                  anchorDirection= {ANCHOR_RIGHT}
 
+              />
+                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+          </form>
+        </div>
+      </Default>
+      <Mobile>
+      <div className="dp-container">
+          <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/xwzk8Z">
+              <input type="hidden" name="date_format" value="d/m/Y"/>
+              <DateRangePicker
+                  {...props}
+                  onDatesChange={this.onDatesChange}
+                  onFocusChange={this.onFocusChange}
+                  focusedInput={focusedInput}
+                  widget_date={widget_date}
+                  widget_date_to={widget_date_to}
+                  displayFormat={() => "DD/MM/YYYY"}
+                  orientation={HORIZONTAL_ORIENTATION}
+                  numberOfMonths= {1}
+                  openDirection= {OPEN_UP}
+                  anchorDirection= {ANCHOR_LEFT}
+
+              />
+                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+          </form>
+        </div>
+      </Mobile>
+      </> 
     );
   }
 }
@@ -184,3 +223,67 @@ DateRangePickerWrapper.propTypes = propTypes;
 DateRangePickerWrapper.defaultProps = defaultProps;
 
 export default DateRangePickerWrapper;
+
+
+// import {
+//   START_DATE,
+//   END_DATE,
+//   VERTICAL_ORIENTATION,
+//   HORIZONTAL_ORIENTATION,
+//   ANCHOR_LEFT,
+//   ANCHOR_RIGHT,
+//   NAV_POSITION_TOP,
+//   OPEN_UP,
+//   OPEN_DOWN
+// } from '../constants';
+
+
+// import Responsive from "react-responsive";
+// export const Mobile = props => <Responsive {...props} maxWidth={767} />;
+// export const Default = props => <Responsive {...props} minWidth={768} />;
+
+{/* <>
+      <Default>
+        <div className="dp-container">
+          <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/xwzk8Z">
+              <input type="hidden" name="date_format" value="d/m/Y"/>
+              <DateRangePicker
+                  {...props}
+                  onDatesChange={this.onDatesChange}
+                  onFocusChange={this.onFocusChange}
+                  focusedInput={focusedInput}
+                  widget_date={widget_date}
+                  widget_date_to={widget_date_to}
+                  displayFormat={() => "DD/MM/YYYY"}
+                  orientation={HORIZONTAL_ORIENTATION}
+                  numberOfMonths= {2}
+                  anchorDirection= {ANCHOR_RIGHT}
+
+              />
+                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+          </form>
+        </div>
+      </Default>
+      <Mobile>
+      <div className="dp-container">
+          <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/NTJkss">
+              <input type="hidden" name="date_format" value="d/m/Y"/>
+              <DateRangePicker
+                  {...props}
+                  onDatesChange={this.onDatesChange}
+                  onFocusChange={this.onFocusChange}
+                  focusedInput={focusedInput}
+                  widget_date={widget_date}
+                  widget_date_to={widget_date_to}
+                  displayFormat={() => "DD/MM/YYYY"}
+                  orientation={HORIZONTAL_ORIENTATION}
+                  numberOfMonths= {1}
+                  openDirection= {OPEN_UP}
+                  anchorDirection= {ANCHOR_LEFT}
+
+              />
+                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+          </form>
+        </div>
+      </Mobile>
+      </> */}
