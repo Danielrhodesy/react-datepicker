@@ -161,7 +161,7 @@ class DateRangePickerWrapper extends React.Component {
 
     return (
       <div className="dp-container">
-        <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/NTJkss">
+        <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/mTWJZY">
             <input type="hidden" name="date_format" value="d/m/Y"/>
             <DateRangePicker
                 {...props}
