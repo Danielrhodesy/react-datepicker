@@ -186,6 +186,8 @@ class DateRangePickerWrapper extends React.Component {
                   displayFormat={() => "DD/MM/YYYY"}
                   orientation={HORIZONTAL_ORIENTATION}
                   numberOfMonths= {2}
+                  anchorDirection= {ANCHOR_RIGHT}
+
               />
                 <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
           </form>
@@ -206,6 +208,8 @@ class DateRangePickerWrapper extends React.Component {
                   orientation={HORIZONTAL_ORIENTATION}
                   numberOfMonths= {1}
                   openDirection= {OPEN_UP}
+                  anchorDirection= {ANCHOR_LEFT}
+
               />
                 <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
           </form>
