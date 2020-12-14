@@ -76,7 +76,7 @@ const defaultProps = {
   // calendar presentation and interaction related props
   renderMonthText: null,
   orientation: HORIZONTAL_ORIENTATION,
-  anchorDirection: ANCHOR_RIGHT,
+  anchorDirection: ANCHOR_LEFT,
   horizontalMargin: 0,
   withPortal: false,
   withFullScreenPortal: false,
@@ -179,7 +179,6 @@ class DateRangePickerWrapper extends React.Component {
               <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
         </form>
       </div>
-
     );
   }
 }
