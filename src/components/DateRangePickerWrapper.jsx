@@ -84,13 +84,13 @@ const defaultProps = {
 
   // calendar presentation and interaction related props
   renderMonthText: null,
-  orientation: HORIZONTAL_ORIENTATION,
-  anchorDirection: ANCHOR_LEFT,
+  // orientation: HORIZONTAL_ORIENTATION,
+  // anchorDirection: ANCHOR_LEFT,
   horizontalMargin: 0,
   withPortal: false,
   withFullScreenPortal: false,
   initialVisibleMonth: null,
-  numberOfMonths: 2,
+  // numberOfMonths: 2,
   keepOpenOnDateSelect: false,
   reopenPickerOnClearDates: false,
   isRTL: false,
