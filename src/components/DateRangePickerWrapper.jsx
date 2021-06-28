@@ -169,27 +169,31 @@ class DateRangePickerWrapper extends React.Component {
       <Default>
         <div className="dp-container">
           <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
-              <input type="hidden" name="date_format" value="d/m/Y"/>
+          <div className="content-wrapper">
+            <input type="hidden" name="date_format" value="d/m/Y"/>
               <DateRangePicker
-                  {...props}
-                  onDatesChange={this.onDatesChange}
-                  onFocusChange={this.onFocusChange}
-                  focusedInput={focusedInput}
-                  widget_date={widget_date}
-                  widget_date_to={widget_date_to}
-                  displayFormat={() => "DD/MM/YYYY"}
-                  orientation={HORIZONTAL_ORIENTATION}
-                  numberOfMonths= {2}
-                  anchorDirection= {ANCHOR_RIGHT}
-
+                {...props}
+                onDatesChange={this.onDatesChange}
+                onFocusChange={this.onFocusChange}
+                focusedInput={focusedInput}
+                widget_date={widget_date}
+                widget_date_to={widget_date_to}
+                displayFormat={() => "DD/MM/YYYY"}
+                orientation={HORIZONTAL_ORIENTATION}
+                numberOfMonths= {2}
+                anchorDirection= {ANCHOR_RIGHT}
               />
-                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+              <div className="button-wrapper">
+                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/> 
+              </div>
+            </div>   
           </form>
         </div>
       </Default>
       <Mobile>
       <div className="dp-container">
           <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
+            <div className="content-wrapper">
               <input type="hidden" name="date_format" value="d/m/Y"/>
               <DateRangePicker
                   {...props}
@@ -205,7 +209,8 @@ class DateRangePickerWrapper extends React.Component {
                   anchorDirection= {ANCHOR_LEFT}
 
               />
-                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+              <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page w-button"/>
+            </div> 
           </form>
         </div>
       </Mobile>
