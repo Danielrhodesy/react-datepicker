@@ -63,7 +63,7 @@
 
 .dp-container{
     width:100%;
-    padding-left:30px;
+    padding-left:10px;
     /* background-color: red; */
 }
 
@@ -93,7 +93,6 @@
 
 .button-text-size {
     padding: 6px 0 0 10px;
-    height: 40px;
 }
 
 .picker-wrapper {
