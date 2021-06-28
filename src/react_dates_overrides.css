@@ -86,13 +86,11 @@
 }
 
 .button-sizing {
-    width: 44%;
+    width: 12.5rem;
 }
 
 .button-text-size {
-    /* display: flex; */
-    /* justify-content: space-around; */
-    padding: 4px 0 0 10px;
+    padding: 5px 0 0 10px;
     height: 30px;
 }
 
@@ -125,3 +123,50 @@
     padding-bottom: 20px;
     color: #262626;
 }
+
+
+
+
+@media only screen 
+  and (min-width: 600px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .DateRangePicker {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .button-sizing {
+        width: 65% !important;
+    }
+
+    .picker-wrapper {
+        display: flex;
+        justify-content: space-around;
+    } 
+}
+
+@media only screen and (max-width: 600px) {
+    .button-sizing {
+        width: 30rem;
+    }
+
+    .button-text-size {
+        padding: 3px 0 0 10px;
+        height: 27px;
+    }
+
+    .button-wrapper {
+        margin-top: 1rem;
+        display: flex;
+        border: 0;
+        justify-content: space-around;
+    }
+
+    .picker-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+  }
