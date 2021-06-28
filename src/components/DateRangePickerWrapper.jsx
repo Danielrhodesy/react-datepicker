@@ -6,7 +6,8 @@ import moment from 'moment';
 import omit from 'lodash/omit';
 import Responsive from "react-responsive";
 export const Mobile = props => <Responsive {...props} maxWidth={767} />;
-export const Default = props => <Responsive {...props} minWidth={768} />;
+export const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={999} />;
+export const Default = props => <Responsive {...props} minWidth={1000} />;
 import DateRangePicker from './DateRangePicker';
 import { DateRangePickerPhrases } from '../defaultPhrases';
 import DateRangePickerShape from '../shapes/DateRangePickerShape';
@@ -194,8 +195,36 @@ class DateRangePickerWrapper extends React.Component {
           </form>
         </div>
       </Default>
+      <Tablet>
+        <div className="dp-container">
+            <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
+              <div className="content-wrapper">
+                <input type="hidden" name="date_format" value="d/m/Y"/>
+                <DateRangePicker
+                    {...props}
+                    onDatesChange={this.onDatesChange}
+                    onFocusChange={this.onFocusChange}
+                    focusedInput={focusedInput}
+                    widget_date={widget_date}
+                    widget_date_to={widget_date_to}
+                    displayFormat={() => "DD/MM/YYYY"}
+                    orientation={HORIZONTAL_ORIENTATION}
+                    numberOfMonths= {1}
+                    openDirection= {OPEN_UP}
+                    anchorDirection= {ANCHOR_LEFT}
+
+                />
+                <div className="button-wrapper w-inline-block w-lightbox">
+                  <button type="submit" className="watch-button button-sizing-tablet">  
+                    <div className="button-label-2 button-text-size-">BOOK ONLINE</div>
+                  </button> 
+                </div>
+              </div> 
+            </form>
+          </div>
+      </Tablet>
       <Mobile>
-      <div className="dp-container">
+        <div className="dp-container">
           <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
             <div className="content-wrapper-mobile">
               <input type="hidden" name="date_format" value="d/m/Y"/>
@@ -213,9 +242,9 @@ class DateRangePickerWrapper extends React.Component {
                   anchorDirection= {ANCHOR_LEFT}
 
               />
-              <div className="button-wrapper w-inline-block w-lightbox">
-                <button type="submit" className="watch-button button-sizing">  
-                  <div className="button-label-2 button-text-size">BOOK ONLINE</div>
+              <div className="button-wrapper-mobile w-inline-block w-lightbox">
+                <button type="submit" className="watch-button button-sizing-mobile">  
+                  <div className="button-label-2 button-text-size-mobile">BOOK ONLINE</div>
                 </button> 
               </div>
             </div> 
