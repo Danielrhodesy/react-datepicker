@@ -1,34 +1,31 @@
-
-
 .CalendarDay__selected {
     background: #0F1527;
     color: white;
     border: 1px double #0F1527;
   }
 
-  .CalendarDay__selected_span{
+.CalendarDay__selected_span{
     background: #EAEDF2;
     border: 1px double rgb(71, 74, 83);
     color: #0F1527;
-  } 
-  .CalendarDay__selected_span:hover{
+} 
+.CalendarDay__selected_span:hover{
     background: #EAEDF2;
     border: 1px double rgb(71, 74, 83);
     color: #0F1527;
-  } 
-  
-  .CalendarDay__Default{
+} 
+
+.CalendarDay__Default{
     background: #EAEDF2;
     border: 1px double rgb(71, 74, 83);
     color: #0F1527;
-  }
+}
   
 .CalendarDay__selected:hover {
-        background: #0F1527;
-        color: white;
-        border: 1px double rgb(71, 74, 83);
-    }
-
+    background: #0F1527;
+    color: white;
+    border: 1px double rgb(71, 74, 83);
+}
 
 .CalendarDay__hovered_span {
     background: #EAEDF2;
@@ -54,7 +51,7 @@
     -moz-appearance: none;
     width: 50em;
     height: 50px;
-    background: #0F1527;
+    background-color: #0F1527;
     border-radius: 2rem;
     color: white;
     font-weight: 400;
@@ -63,31 +60,39 @@
     letter-spacing: 0.2rem;
 }
 
-
 .dp-container{
-    width:100%;
+    width:600px;
+    /* background-color: red; */
 }
 
 .datepicker-style {
-    /* display: flex; */
+    display: flex;
+    flex-direction: row;
     height: 8rem;
     /* justify-content: space-between; */
 }
 
 .content-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .button-wrapper {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.picker-wrapper {
+    display: flex;
+    justify-content: space-around;
 }
 
 
 
-
 .DateRangePickerInput {
-    width: 12rem;
+    width: 18rem;
 }
 
 .DateInput {
