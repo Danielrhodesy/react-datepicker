@@ -198,7 +198,7 @@ class DateRangePickerWrapper extends React.Component {
       <Tablet>
         <div className="dp-container">
             <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
-              <div className="content-wrapper">
+              <div className="content-wrapper-tablet">
                 <input type="hidden" name="date_format" value="d/m/Y"/>
                 <DateRangePicker
                     {...props}
@@ -214,7 +214,7 @@ class DateRangePickerWrapper extends React.Component {
                     anchorDirection= {ANCHOR_LEFT}
 
                 />
-                <div className="button-wrapper w-inline-block w-lightbox">
+                <div className="button-wrapper-tablet w-inline-block w-lightbox">
                   <button type="submit" className="watch-button button-sizing-tablet">  
                     <div className="button-label-2 button-text-size-">BOOK ONLINE</div>
                   </button> 

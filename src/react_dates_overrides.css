@@ -102,8 +102,8 @@
 
 
 .DateRangePicker {
-    /* display: flex; */
-    margin-left: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .DateRangePickerInput {
@@ -129,6 +129,12 @@
     color: #262626;
 }
 
+.content-wrapper-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .button-sizing-mobile {
     width: 12.2rem ;    
 }
@@ -146,6 +152,12 @@
 }
 
 
+.content-wrapper-tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .button-sizing-tablet {
     width: 60%;
 }
@@ -155,3 +167,9 @@
     height: 30px;
 }
 
+.button-wrapper-tablet {
+    margin-top: 1rem;
+    display: flex;
+    border: 0;
+    justify-content: space-around;
+}
