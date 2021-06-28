@@ -61,7 +61,7 @@
 }
 
 .dp-container{
-    width:600px;
+    width:100%;
     /* background-color: red; */
 }
 
@@ -85,8 +85,15 @@
     justify-content: space-around;
 }
 
-.button-size {
-    height: 50px;
+.button-sizing {
+    width: 44%;
+}
+
+.button-text-size {
+    /* display: flex; */
+    /* justify-content: space-around; */
+    padding: 4px 0 0 10px;
+    height: 30px;
 }
 
 .picker-wrapper {
