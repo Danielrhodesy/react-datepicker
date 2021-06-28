@@ -92,7 +92,7 @@
 
 
 .DateRangePickerInput {
-    width: 18rem;
+    width: 18rem !important;
 }
 
 .DateInput {

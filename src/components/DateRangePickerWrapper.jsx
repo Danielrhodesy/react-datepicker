@@ -184,7 +184,7 @@ class DateRangePickerWrapper extends React.Component {
                   numberOfMonths= {2}
                   anchorDirection= {ANCHOR_RIGHT}
                 />
-              </div>  
+              </div>
               <div className="button-wrapper">
                 <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page watch-button"/> 
               </div>
