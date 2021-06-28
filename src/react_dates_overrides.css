@@ -21,6 +21,7 @@
     color: #0F1527;
 }
   
+
 .CalendarDay__selected:hover {
     background: #0F1527;
     color: white;
@@ -102,7 +103,7 @@
 
 
 .DateRangePicker {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
 }
 
