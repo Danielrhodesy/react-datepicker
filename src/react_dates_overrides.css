@@ -79,9 +79,14 @@
 }
 
 .button-wrapper {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
+    border: 0;
     justify-content: space-around;
+}
+
+.button-size {
+    height: 50px;
 }
 
 .picker-wrapper {

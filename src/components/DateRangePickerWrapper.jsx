@@ -185,8 +185,10 @@ class DateRangePickerWrapper extends React.Component {
                   anchorDirection= {ANCHOR_RIGHT}
                 />
               </div>
-              <div className="button-wrapper">
-                <input type="submit" value="Book Online" data-wait="Please wait..." class="button-black-hover stay-page watch-button"/> 
+              <div className="button-wrapper w-inline-block w-lightbox">
+                <button type="submit" className="watch-button">  
+                  <div className="button-label-2 button-size">BOOK ONLINE</div>
+                </button> 
               </div>
             </div>   
           </form>
