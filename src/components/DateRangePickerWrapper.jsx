@@ -215,8 +215,8 @@ class DateRangePickerWrapper extends React.Component {
 
                 />
                 <div className="button-wrapper-tablet w-inline-block w-lightbox">
-                  <button type="submit" className="watch-button button-sizing-tablet">  
-                    <div className="button-label-2 button-text-size-">BOOK ONLINE</div>
+                  <button type="submit" className="watch-button button-sizing">  
+                    <div className="button-label-2 button-text-size-tablet">BOOK ONLINE</div>
                   </button> 
                 </div>
               </div> 
@@ -243,7 +243,7 @@ class DateRangePickerWrapper extends React.Component {
 
               />
               <div className="button-wrapper-mobile w-inline-block w-lightbox">
-                <button type="submit" className="watch-button button-sizing-mobile">  
+                <button type="submit" className="watch-button button-sizing">  
                   <div className="button-label-2 button-text-size-mobile">BOOK ONLINE</div>
                 </button> 
               </div>

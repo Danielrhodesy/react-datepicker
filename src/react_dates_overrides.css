@@ -88,7 +88,7 @@
 }
 
 .button-sizing {
-    width: 13rem !important;
+    width: 200px !important;
 }
 
 .button-text-size {
@@ -136,12 +136,8 @@
     flex-direction: column;
 }
 
-.button-sizing-mobile {
-    width: 10.5rem ;    
-}
-
 .button-text-size-mobile {
-    padding: 4px 0 0 8px;
+    padding: 5px 0 0 8px;
     height: 25px;
 }
 
@@ -159,10 +155,6 @@
     flex-direction: column;
 }
 
-.button-sizing-tablet {
-    width: 55%;
-}
-
 .button-text-size-tablet {
     padding: 3% 0 0 10px;
     height: 30px !important;
@@ -174,4 +166,3 @@
     border: 0;
     justify-content: space-around;
 }
-
