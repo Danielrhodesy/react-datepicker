@@ -183,11 +183,12 @@ class DateRangePickerWrapper extends React.Component {
                   displayFormat={() => "DD/MM/YYYY"}
                   orientation={HORIZONTAL_ORIENTATION}
                   numberOfMonths= {2}
+                  openDirection= {OPEN_UP}
                   anchorDirection= {ANCHOR_RIGHT}
                 />
               </div>
-              <div className="button-wrapper w-inline-block w-lightbox">
-                <button type="submit" className="watch-button button-sizing">  
+              <div className="button-wrapper">
+                <button type="submit" className="watch-button button-size">  
                   <div className="button-label-2 button-text-size">网上预定</div>
                 </button> 
               </div>
@@ -214,8 +215,8 @@ class DateRangePickerWrapper extends React.Component {
                     anchorDirection= {ANCHOR_LEFT}
 
                 />
-                <div className="button-wrapper-tablet w-inline-block w-lightbox">
-                  <button type="submit" className="watch-button button-sizing">  
+                <div className="button-wrapper-tablet">
+                  <button type="submit" className="watch-button button-size">  
                     <div className="button-label-2 button-text-size-tablet">网上预定</div>
                   </button> 
                 </div>
@@ -242,8 +243,8 @@ class DateRangePickerWrapper extends React.Component {
                   anchorDirection= {ANCHOR_LEFT}
 
               />
-              <div className="button-wrapper-mobile w-inline-block w-lightbox">
-                <button type="submit" className="watch-button button-sizing">  
+              <div className="button-wrapper-mobile">
+                <button type="submit" className="watch-button button-size">  
                   <div className="button-label-2 button-text-size-mobile">网上预定</div>
                 </button> 
               </div>
