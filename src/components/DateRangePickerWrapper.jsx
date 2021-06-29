@@ -187,8 +187,8 @@ class DateRangePickerWrapper extends React.Component {
                   anchorDirection= {ANCHOR_RIGHT}
                 />
               </div>
-              <div className="button-wrapper w-inline-block w-lightbox">
-                <button type="submit" className="watch-button button-sizing">  
+              <div className="button-wrapper">
+                <button type="submit" className="watch-button button-size">  
                   <div className="button-label-2 button-text-size">BOOK ONLINE</div>
                 </button> 
               </div>
@@ -215,8 +215,8 @@ class DateRangePickerWrapper extends React.Component {
                     anchorDirection= {ANCHOR_LEFT}
 
                 />
-                <div className="button-wrapper-tablet w-inline-block w-lightbox">
-                  <button type="submit" className="watch-button button-sizing">  
+                <div className="button-wrapper-tablet">
+                  <button type="submit" className="watch-button button-size">  
                     <div className="button-label-2 button-text-size-tablet">BOOK ONLINE</div>
                   </button> 
                 </div>
@@ -243,8 +243,8 @@ class DateRangePickerWrapper extends React.Component {
                   anchorDirection= {ANCHOR_LEFT}
 
               />
-              <div className="button-wrapper-mobile w-inline-block w-lightbox">
-                <button type="submit" className="watch-button button-sizing">  
+              <div className="button-wrapper-mobile">
+                <button type="submit" className="watch-button button-size">  
                   <div className="button-label-2 button-text-size-mobile">BOOK ONLINE</div>
                 </button> 
               </div>
