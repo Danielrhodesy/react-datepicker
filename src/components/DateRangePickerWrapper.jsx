@@ -183,6 +183,7 @@ class DateRangePickerWrapper extends React.Component {
                   displayFormat={() => "DD/MM/YYYY"}
                   orientation={HORIZONTAL_ORIENTATION}
                   numberOfMonths= {2}
+                  openDirection= {OPEN_UP}
                   anchorDirection= {ANCHOR_RIGHT}
                 />
               </div>
