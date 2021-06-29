@@ -63,7 +63,7 @@
 
 .dp-container{
     width:100%;
-    padding-left:10px;
+    padding-left:10px !important;
     /* background-color: red; */
 }
 
@@ -160,12 +160,12 @@
 }
 
 .button-sizing-tablet {
-    width: 60%;
+    width: 55%;
 }
 
 .button-text-size-tablet {
     padding: 3% 0 0 10px;
-    height: 30px;
+    height: 30px !important;
 }
 
 .button-wrapper-tablet {
