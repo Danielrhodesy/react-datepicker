@@ -176,7 +176,6 @@ class DayPickerRangeControllerWrapper extends React.Component {
             <input type="text" name="end date" value={widget_date_toString} readOnly />
           </div>
         )}
-
         <DayPickerRangeController
           {...props}
           onDatesChange={this.onDatesChange}
