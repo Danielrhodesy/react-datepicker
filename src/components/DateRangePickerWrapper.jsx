@@ -164,11 +164,13 @@ class DateRangePickerWrapper extends React.Component {
       'stateDateWrapper',
     ]);
 
+    const cloudbedsLink = "https://hotels.cloudbeds.com/reservas/RGSKmP"
+
     return (
       <>
       <Default>
         <div className="dp-container">
-          <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
+          <form id="react-date-picker" class="datepicker-style" method="post" action={cloudbedsLink}>
               <input type="hidden" name="date_format" value="d/m/Y"/>
               <DateRangePicker
                   {...props}
@@ -189,7 +191,7 @@ class DateRangePickerWrapper extends React.Component {
       </Default>
       <Mobile>
       <div className="dp-container">
-          <form id="react-date-picker" class="datepicker-style" method="post" action="https://hotels.cloudbeds.com/reservas/RGSKmP">
+          <form id="react-date-picker" class="datepicker-style" method="post" action={cloudbedsLink}>
               <input type="hidden" name="date_format" value="d/m/Y"/>
               <DateRangePicker
                   {...props}

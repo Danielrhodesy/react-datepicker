@@ -5,7 +5,7 @@ import 'react-dates/initialize';
 import DateRangePickerWrapper from './components/DateRangePickerWrapper';
 import './react_dates_overrides.css'
 
-
+const datepickerId = 'react-datepicker-niseko2'
 
 
     class App extends Component {
@@ -22,7 +22,7 @@ import './react_dates_overrides.css'
 
 ReactDOM.render(
 React.createElement(App, {}, null),
-document.getElementById('react-datepicker-niseko2')
+document.getElementById(datepickerId)
 );
 
 
